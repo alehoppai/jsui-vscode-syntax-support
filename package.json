@@ -4,6 +4,10 @@
   "description": "Javascript language extension for intuitive UI development.",
   "publisher": "Aleh Belski",
   "version": "0.0.1",
+  "main": "./client.js",
+  "activationEvents": [
+    "onLanguage:jsui"
+  ],
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -36,5 +40,8 @@
       }
     ]
   },
-  "icon": "media/jsui-extension-icon.png"
+  "icon": "media/jsui-extension-icon.png",
+  "dependencies": {
+    "vscode-languageserver": "^9.0.1"
+  }
 }
