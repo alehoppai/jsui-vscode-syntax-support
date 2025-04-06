@@ -2,14 +2,14 @@ const {
   createConnection,
   TextDocuments,
   ProposedFeatures,
-  Hover,
   TextDocumentSyncKind,
 } = require("vscode-languageserver");
 
+const { TextDocument } = require("vscode-languageserver-textdocument");
 const { parseJSUI } = require("./parser");
 
 const connection = createConnection(ProposedFeatures.all);
-const documents = new TextDocuments();
+const documents = new TextDocuments(TextDocument);
 
 connection.onInitialize(() => {
   return {
