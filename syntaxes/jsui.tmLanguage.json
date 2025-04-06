@@ -18,7 +18,7 @@
       "patterns": [
         {
           "name": "keyword.control.jsui",
-          "match": "\\b(view|state|store|layout|outlet|return|let|const|if|else|for|while|render)\\b"
+          "match": "\\b(view|state|sharedState|store|layout|outlet|return|let|const|if|else|for|while|render)\\b"
         },
         {
           "name": "keyword.control.import-export.jsui",
