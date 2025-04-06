@@ -10,16 +10,26 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "jsui",
-      "aliases": ["jsui", "jsui"],
-      "extensions": [".jsui"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "jsui",
-      "scopeName": "source.jsui",
-      "path": "./syntaxes/jsui.tmLanguage.json"
-    }]
-  }
+    "languages": [
+      {
+        "id": "jsui",
+        "aliases": [
+          "jsui",
+          "jsui"
+        ],
+        "extensions": [
+          ".jsui"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "jsui",
+        "scopeName": "source.js.jsui",
+        "path": "./syntaxes/jsui.tmLanguage.json"
+      }
+    ]
+  },
+  "icon": "media/jsui-logo.png"
 }
