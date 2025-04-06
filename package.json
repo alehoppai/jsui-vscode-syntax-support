@@ -3,6 +3,10 @@
   "displayName": "jsui",
   "description": "Javascript language extension for intuitive UI development.",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alehoppai/jsui-vscode-syntax-support"
+  },
   "engines": {
     "vscode": "^1.99.0"
   },
@@ -31,5 +35,5 @@
       }
     ]
   },
-  "icon": "media/jsui-logo.png"
+  "icon": "media/jsui-extension-icon.png"
 }
