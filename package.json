@@ -1,0 +1,25 @@
+{
+  "name": "jsui",
+  "displayName": "jsui",
+  "description": "Javascript language extension for intuitive UI development.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "jsui",
+      "aliases": ["jsui", "jsui"],
+      "extensions": [".jsui"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "jsui",
+      "scopeName": "source.jsui",
+      "path": "./syntaxes/jsui.tmLanguage.json"
+    }]
+  }
+}

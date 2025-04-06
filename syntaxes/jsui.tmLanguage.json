@@ -1,0 +1,99 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "jsui",
+  "scopeName": "source.js.jsui",
+  "fileTypes": ["jsui"],
+
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#components" },
+    { "include": "#directives" },
+    { "include": "#strings" },
+    { "include": "#templateStrings" },
+    { "include": "#namedArgs" }
+  ],
+
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.jsui",
+          "match": "\\b(view|state|signal|layout|outlet|return|let|const|if|else|for|while)\\b"
+        }
+      ]
+    },
+
+    "directives": {
+      "patterns": [
+        {
+          "name": "keyword.directive.jsui",
+          "match": "@\\w+"
+        }
+      ]
+    },
+
+    "components": {
+      "patterns": [
+        {
+          "name": "support.function.component.jsui",
+          "match": "\\b(Flex|Text|Button|Title|VStack|HStack|Spacer)\\b(?=\\s*\\(.*?\\)\\s*=>)"
+        },
+        {
+          "name": "support.function.inline-component.jsui",
+          "match": "\\b(Flex|Text|Button|Title|VStack|HStack|Spacer)\\b(?=\\s*\\()"
+        }
+      ]
+    },
+
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.jsui",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.jsui",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+
+    "templateStrings": {
+      "patterns": [
+        {
+          "name": "string.quoted.template.jsui",
+          "begin": "`",
+          "end": "`",
+          "patterns": [
+            {
+              "name": "constant.character.escape.jsui",
+              "match": "\\\\."
+            },
+            {
+              "name": "interpolation.jsui",
+              "begin": "\\$\\{",
+              "end": "\\}",
+              "patterns": [{ "include": "#keywords" }]
+            }
+          ]
+        }
+      ]
+    },
+
+    "namedArgs": {
+      "patterns": [
+        {
+          "name": "variable.parameter.named.jsui",
+          "match": "\\b\\w+\\b(?=\\s*:\\s*)"
+        },
+        {
+          "name": "keyword.operator.assignment.jsui",
+          "match": ":"
+        }
+      ]
+    }
+  }
+}
